@@ -4,7 +4,7 @@ let pagoxHora = 22.91;
 /*const var1 = document.getElementById("salario");
 const salario = var1.value;*/
 
-function calcularHoras(){
+function total(){
     const var1 = document.getElementById("dobles");
     const dobles = var1.value;
     const var2 = document.getElementById("triples");
@@ -12,20 +12,12 @@ function calcularHoras(){
     const horasDobles = (pagoxHora * 2) * dobles;
     const horasTriples = (pagoxHora * 3) * triples;
     const totalHoras = horasDobles + horasTriples;
-    console.log(horasDobles);
 
-
-    function total(){
-        const mostrarResultado=document.getElementById("resultado").innerHTML = totalHoras;
-        console.log("El pago total de horas es: "+totalHoras);
-    }
-
-    if(triples>0){
-        console.log(horasTriples);
-        total();
-    } else{
-        const mostrarResultado=document.getElementById("resultado").innerHTML = totalHoras;
-        console.log("No hay horas triples");
-        total();
+    const mostrarResultado=document.getElementById("resultado").innerHTML = "<P>El pago total de horas es: <P/>"+totalHoras;
+     if(triples==0){
+            
+         console.log(totalHoras);
+     } else if(triples>0){
+     const mostrarResultado=document.getElementById("resultado").innerHTML = "<P>El pago total de horas es: <P/>"+totalHoras;
     }
 }

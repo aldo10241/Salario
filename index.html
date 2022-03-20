@@ -11,17 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <section>
         <form action="">
             <p>Salario neto mensual: $6,186.84</p>
-
-            <label for="">¿Cuantas horas dobles trabajaste?</label>
+            
+            <label for="dobles">¿Cuantas horas dobles trabajaste?</label>
             <input id="dobles" type="number">
 
-            <label for="">¿Cuantas horas triples trabajaste?</label>
+            <label for="triples">¿Cuantas horas triples trabajaste?</label>
             <input id="triples" type="number">
 
-            <button type="button" onclick="calcularHoras()">Enviar</button>
+            <button type="button" onclick="total()">Enviar</button>
         </form>
         <p id="resultado"></p>
     </section>
