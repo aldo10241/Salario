@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salario</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +13,14 @@
 </head>
 <body>
 
-    <section>
+    <section id="formulario">
         <form action="">
-            <p>Salario neto mensual: $6,186.84</p>
-            
-            <label for="dobles">¿Cuantas horas dobles trabajaste?</label>
-            <input id="dobles" type="number">
+            <!-- <p>Salario neto mensual: $6,186.84</p> -->
 
-            <label for="triples">¿Cuantas horas triples trabajaste?</label>
-            <input id="triples" type="number">
+
+            
+            <label for="horasExtra">¿Cuantas horas extra trabajaste?</label>
+            <input id="horasExtra" type="number">
 
             <button type="button" onclick="total()">Enviar</button>
         </form>

@@ -1,23 +1,21 @@
 let miSalarioMensual = 6186.84;
 let pagoxHora = 22.91;
 
-/*const var1 = document.getElementById("salario");
-const salario = var1.value;*/
-
 function total(){
-    const var1 = document.getElementById("dobles");
-    const dobles = var1.value;
-    const var2 = document.getElementById("triples");
-    const triples = var2.value;
-    const horasDobles = (pagoxHora * 2) * dobles;
-    const horasTriples = (pagoxHora * 3) * triples;
-    const totalHoras = horasDobles + horasTriples;
+    const var1 = document.getElementById("horasExtra");
+    const horasExtra = var1.value;
+    const horasDobles=9;
+    const horasTriples=horasExtra-9;
+    const ValorHoraDoble = (pagoxHora * 2);
+    const ValorHoraTriple = (pagoxHora * 3);
 
-    const mostrarResultado=document.getElementById("resultado").innerHTML = "<P>El pago total de horas es: <P/>"+totalHoras;
-     if(triples==0){
-            
-         console.log(totalHoras);
-     } else if(triples>0){
-     const mostrarResultado=document.getElementById("resultado").innerHTML = "<P>El pago total de horas es: <P/>"+totalHoras;
+    if(horasExtra<=9){
+        const resultadoSoloDobles=horasExtra*ValorHoraDoble;
+        const mostrarResultado=document.getElementById("resultado").innerHTML = "<i>El pago total aproximado de tiempo extra es: <i/>"+resultadoSoloDobles;
+    } else {
+        const resultadoSoloDobles=ValorHoraDoble*9;
+        const resultadoSoloTriples=horasTriples*ValorHoraTriple;
+        const resultadoFinal=resultadoSoloDobles+resultadoSoloTriples;
+        const mostrarResultado=document.getElementById("resultado").innerHTML = "<P>El pago total aproximado de tiempo extra es: <P/>"+resultadoFinal;
     }
 }
